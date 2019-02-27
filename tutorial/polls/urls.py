@@ -3,5 +3,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-	path('',views.addpolls,name='index'),
+	path('',views.AddPollsView.as_view(),name='index'),
 ]
