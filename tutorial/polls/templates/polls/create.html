@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <form method = "POST">
+        <div id="forms">
+            {% csrf_token %}
+            {{ form.as_p }}
+        </div>
+        <!-- <button id="add-another" type="button">add another</button> -->
+        <input type="submit" />
+    </form>
+
+    <!-- <script>
+        var form_count = Number($("[name=extra_field_count]").val());
+        // get extra form count so we know what index to use for the next item.
+        $("#add-another").click(function() {
+            console.log("clicked")
+            form_count++;
+
+            element = $('<input type="text"/>');
+            element.attr('name', 'extra_field_' + form_count);
+            $("#forms").append(element);
+            // build element and append it to our forms container
+
+            $("[name=extra_field_count]").val(form_count);
+            // increment form count so our view knows to populate
+            // that many fields for validation
+        })
+    </script> -->
+</body>
+</html>
