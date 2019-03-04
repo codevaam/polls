@@ -12,6 +12,7 @@
     <h1>{{ question_text }}</h1>
     {{ formset.as_p }}
     <button type="submit">Save</button>
+    <button type="button" onclick="location.href='{% url 'home' %}'">Save Question</button>
     </form>
 </body>
 </html>
